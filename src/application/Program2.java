@@ -17,5 +17,9 @@ public class Program2 {
         Department department = new Department(null, "RH");
         departmentDao.insert(department);
 
+        System.out.println("\n--- Test 2: Department: Update ---");
+        department.setName("Recursos Humanos - RH");
+        departmentDao.update(department);
+
     }
 }
