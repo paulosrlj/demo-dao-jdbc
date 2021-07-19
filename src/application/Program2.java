@@ -5,6 +5,8 @@ import model.dao.DepartmentDao;
 import model.dao.impl.DepartmentDaoJDBC;
 import model.entities.Department;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Program2 {
@@ -25,5 +27,9 @@ public class Program2 {
         department = departmentDao.findById(3);
         System.out.println(department);
 
+        System.out.println("\n--- Test 4: Department: findAll ---");
+        List<Department> deps = departmentDao.findAll();
+        for (Department dep : deps)
+            System.out.println(dep);
     }
 }
