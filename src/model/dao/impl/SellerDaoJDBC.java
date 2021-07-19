@@ -97,9 +97,9 @@ public class SellerDaoJDBC implements SellerDao {
 
         try {
             st = conn.prepareStatement(
-                    "SELECT seller.*,department.Name as DepName "
-                            + "FROM seller INNER JOIN department "
-                            + "ON seller.DepartmentId = department.Id "
+                    "SELECT S.*, D.Name as DepName "
+                            + "FROM seller S INNER JOIN department D "
+                            + "ON S.DepartmentId = D.Id "
                             + "ORDER BY Name"
             );
 
