@@ -31,5 +31,9 @@ public class Program2 {
         List<Department> deps = departmentDao.findAll();
         for (Department dep : deps)
             System.out.println(dep);
+
+        System.out.println("\n--- Test 5: Department: deleteById ---");
+        System.out.println("Delete completed");
+        departmentDao.deleteById(17);
     }
 }
