@@ -21,5 +21,9 @@ public class Program2 {
         department.setName("Recursos Humanos - RH");
         departmentDao.update(department);
 
+        System.out.println("\n--- Test 3: Department: findById ---");
+        department = departmentDao.findById(3);
+        System.out.println(department);
+
     }
 }
